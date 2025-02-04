@@ -1,0 +1,87 @@
+.slider-box {
+    .callbacks_container {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        @include media-breakpoint-up(xl) {                             
+            height: 100vh;
+        }
+        .callbacks_nav {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            padding: 0 20px;
+            // background: #000;
+            color: #fff;
+            left: 0;
+            top: 50%;
+            margin-top: -25px;
+            z-index: 9;
+            font-size: 0;
+            &::after {
+                position: absolute;
+                height: 50px;
+                width: 50px;
+                font-size: 80px;
+                font-family: FontAwesome;
+                content: "\f104";
+            }
+            &.next {
+                left: inherit;
+                right: 20px;
+                &::after {
+                    content: "\f105";
+                }
+            }
+        }
+        ul {
+            li {                
+                img {
+                    animation: zoominoutsinglefeatured 50s ease-in-out infinite ;
+                }                
+            }
+        } 
+    }
+}
+
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+
+.slick-dots {
+    bottom: -33px;
+    
+    li {
+        text-align: center;
+        vertical-align: middle;
+        padding-top: 4px;
+
+        button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: solid 1px #481405;
+            margin: 0px auto;
+        
+            &::before {
+                display: none;
+            }
+        }
+
+        &.slick-active {
+            button {
+                background-color: #481405;
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../style/gallery.scss"
+    ],
+    "names": [],
+    "file": "gallery.css"
+}

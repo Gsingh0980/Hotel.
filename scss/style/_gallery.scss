@@ -1,0 +1,81 @@
+.gallery-section {
+    background: $them1;
+    position: relative ;
+    .gallery-box{
+        background: url('../images/gallery.jpg') no-repeat top 
+        center;
+        background-size: cover;
+        background-position-y: 60%;
+        padding: 100px 0 140px;
+        @include media-breakpoint-up(lg) {
+            padding: 100px 0 250px;
+
+         }
+    }
+    .section-title {
+        color: white;
+        span {
+            color: white;
+        }
+    }
+    .gallery-silder-box { 
+        
+        margin-top: -140px;
+        padding-bottom: 50px;
+        @include media-breakpoint-up(lg) {
+            margin-top: -260px;
+            padding-bottom: 80px;
+
+        }
+        .gallery-relative {
+            margin: 10px;
+            .gallery-items {
+                overflow: hidden;
+                figure {
+                    height: 100%;
+                    position: relative;
+                    img {
+                        max-height: 100%;
+                        max-width: 100%;
+                    }
+                    .caption {
+                        width: 100%;
+                        color: white;
+                        position: absolute;
+                        bottom: 0;
+                        padding: 20px;
+                        left: 0;
+                        text-align: center;
+                        align-items: center;
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        background: rgba(0,0,0,0.5);
+                        height: 30%;
+                        transition: all .5s ease-in-out;
+                        line-height: normal;
+                        font-size: 20px;
+                        @include media-breakpoint-up(xl){
+                            font-size: 40px;
+
+                        }
+                        span {
+                            display: block;
+                        }
+                    }
+                }
+                &:hover {
+                    figure {                    
+                        .caption {
+                            height: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .gallery-slider{
+        padding-left: 0;
+    
+    }
+}

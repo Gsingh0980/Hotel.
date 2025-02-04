@@ -1,0 +1,37 @@
+header {
+    background-color: $white;
+    padding: 20px 0px;
+    .headar-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }  
+    
+    .logo {
+        text-align: center;
+        img {
+            max-width: 70%;
+            @include media-breakpoint-up(md) { 
+                max-width: 150px;
+
+            }
+        }
+    }
+}
+
+.btn-reservation {
+    button {
+        border: 0px;
+        background-color: #7A311C;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 14px;
+        padding: 8px 15px;
+        @include media-breakpoint-up(md) { 
+            font-size: 20px;
+            padding: 8px 30px;
+
+        }
+    }
+}

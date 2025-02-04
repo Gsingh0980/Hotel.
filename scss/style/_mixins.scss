@@ -1,0 +1,42 @@
+@mixin linear-gradient($direction, $color-stops...) {
+    background: nth(nth($color-stops, 1), 1);
+    background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+    background: linear-gradient($direction, $color-stops);
+}
+
+@mixin transition($transition){
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+@mixin ellipsis(){
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
+// @include border-radius(3px);
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+}
+
+// @include transformtranslateY(-50%);
+@mixin transformtranslateY($Y) {
+    -webkit-transform: translateY($Y);
+    -moz-transform: translateY($Y);
+    -ms-transform: translateY($Y);
+    -o-transform: translateY($Y);
+    transform: translateY($Y);
+}
+// @include transformtranslate(-50%, -50%);
+@mixin transformtranslate($X,$Y) {
+    -webkit-transform: translate($X,$Y);
+    -moz-transform: translate($X,$Y);
+    -ms-transform: translate($X,$Y);
+    -o-transform: translate($X,$Y);
+    transform: translate($X,$Y);
+}
